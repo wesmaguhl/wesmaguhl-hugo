@@ -1,4 +1,132 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = 'nomad-tech'
+baseURL = "https://wesmaguhl.github.io/"
+defaultContentLanguage = "fr"
+theme = "nomad-tech"
+
+[pagination]
+  pagerSize = 6
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[languages]
+  [languages.fr]
+    languageCode = "fr-FR"
+    title = "Wesmaguhl Officiel"
+    weight = 1
+  [languages.en]
+    languageCode = "en-US"
+    title = "Wesmaguhl Official"
+    weight = 2
+  [languages.zh]
+    languageCode = "zh-CN"
+    title = "Wesmaguhl 官方"
+    weight = 3
+
+[params]
+  author = "Wesmaguhl"
+  logo = "NOMAD-TECH"
+  subtitle = "Metal • Flute • Pagan"
+  description = "Wesmaguhl Website Officiel - Bienvenue dans notre univers"
+
+  # Analytics (optional)
+  googleAnalytics = "G-2310RJEC91"
+
+  # Social Media Links
+  [[params.social]]
+    name = "YouTube"
+    class = "youtube"
+    icon = "📺"
+    description = "Clips and nomad vlogs"
+    url = "https://www.youtube.com/@wesmaguhl"
+    button_text = "Visit Channel"
+
+  [[params.social]]
+    name = "Spotify"
+    class = "spotify"
+    icon = "🎵"
+    description = "Real stuff here"
+    url = "https://open.spotify.com/intl-fr/artist/5qFC8CMfzTr7wB6JSH3sBM"
+    button_text = "Follow Us"
+
+  # Portfolio Items
+  [[params.portfolio]]
+    title = "Merch Store"
+    type = "Merchandise Platform"
+    icon = "🛒"
+    description = "Retrouvez ici tout nos produits dérivés officiels."
+    tags = ["T-Shirt", "CD", "Mediators"]
+    project_url = "/projects/nomad-app/"
+
+  # Travel Timeline
+  [[params.travels]]
+    city = "France"
+    country = "Lyon"
+    flag = "🇮🇩"
+    period = "26 Décembre 2025"
+    description = "Rock'N'Eat Festival"
+    highlights = ["Co-working spaces", "Street food", "Tech meetups"]
+
+  [[params.travels]]
+    city = "France"
+    country = "St-Georges-de-Reneins"
+    flag = "🇮🇩"
+    period = "14-15 novembre 2025"
+    description = "Beaujo'Fest"
+    highlights = ["Co-working spaces", "Street food", "Tech meetups"]
+
+  [[params.travels]]
+    city = "France"
+    country = "Grenoble"
+    flag = "🇮🇩"
+    period = "6 novembre 2025 "
+    description = "Halloween After Party - MAGOYOND / Y. Blues / Wesmaguhl"
+    highlights = ["Co-working spaces", "Street food", "Tech meetups"]
+
+  [[params.travels]]
+    city = "France"
+    country = "Bourg - Saint-Maurice"
+    flag = "🇮🇩"
+    period = "4 juillet 2025"
+    description = "Festival Bande Rouge"
+    highlights = ["Co-working spaces", "Street food", "Tech meetups"]
+
+  [[params.travels]]
+    city = "France"
+    country = "Grenoble"
+    flag = "🇮🇩"
+    period = "21 juin 2025"
+    description = "Fête de la Musique - The Rock Tavern"
+    highlights = ["Co-working spaces", "Street food", "Tech meetups"]
+
+  [[params.travels]]
+    city = "France"
+    country = "Les Adrets"
+    flag = "🇮🇩"
+    period = "13 juin 2025"
+    description = "Festirock en Belledonne"
+    highlights = ["Nomad Summit", "Temples", "Mountain views"]
+
+  [[params.travels]]
+    city = "France"
+    country = "Grenoble"
+    flag = "🇮🇩"
+    period = "22 février 2025"
+    description = "Release Party - The Rock Tavern"
+    highlights = ["Surfing", "Rice terraces", "Startup scene"]
+
+  # Contact Information
+  [[params.contact]]
+    icon = "📧"
+    name = "email"
+    value = "me@m03315.top"
+  
+  [[params.contact]]
+    icon = "💬"
+    name = "wechat"
+    value = "m03315_"
+  
+  [[params.contact]]
+    icon = "🐦"
+    name = "twitter"
+    value = "@m03315_"
