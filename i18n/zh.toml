@@ -27,9 +27,9 @@ other = "关于"
 [travel]
 other = "旅行"
 [hero_greeting]
-other = "Hi, 我是"
+other = ""
 [follow_social]
-other = "关注我的社交媒体"
+other = "关注我们的社交媒体"
 [learn_more]
 other = "了解更多"
 [social_description]

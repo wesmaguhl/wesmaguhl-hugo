@@ -27,9 +27,9 @@ other = "About"
 [travel]
 other = "Travel"
 [hero_greeting]
-other = "Hi, I'm"
+other = ""
 [follow_social]
-other = "Follow My Social Media"
+other = "Follow us on our social media"
 [learn_more]
 other = "Learn More"
 [social_description]
