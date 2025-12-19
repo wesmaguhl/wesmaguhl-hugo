@@ -1,0 +1,68 @@
+{{ define "main" }}
+<section class="hero" style="
+    background-image: url('https://cdn.cmsfly.com/67bddb3dec56ad005697fa0c/images/page1sanstext-FqPX2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+">
+    <!-- Overlay pour améliorer la lisibilité du texte -->
+    <div style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 0;
+    "></div>
+    
+    <div class="hero-content" style="position: relative; z-index: 10; text-align: center;">
+        <img src="https://cdn.cmsfly.com/67bddb3dec56ad005697fa0c/images/wesmaghul-1FFwC.png" 
+             alt="Wesmaguhl" 
+             style="max-width: 500px; width: 90%; height: auto; margin: 0 auto 2rem auto; display: block; filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.8));">
+        <p style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8); font-size: 1.5rem;">{{ .Site.Params.subtitle | default "Metal • Flute • Pagan" }}</p>
+        <p style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">{{ .Site.Params.description | default "Wesmaguhl Officiel Website - Bienvenue dans notre univers" }}</p>
+        <div class="cta-buttons" style="margin-top: 2rem;">
+            <a href="{{ .Site.BaseURL }}galerie/" class="btn btn-primary">{{ i18n "galerie" }}</a>
+            <a href="{{ .Site.BaseURL }}about/" class="btn btn-secondary">{{ i18n "learn_more" }}</a>
+        </div>
+    </div>
+    
+    <!-- Footer intégré dans la page d'accueil -->
+    <div style="position: absolute; bottom: 20px; left: 0; right: 0; z-index: 10; text-align: center;">
+        <p style="color: rgba(255, 255, 255, 0.6); margin: 0; font-size: 0.9rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">
+            Copyright © {{ now.Year }} • {{ .Site.Params.author }}
+        </p>
+    </div>
+</section>
+
+<style>
+/* Ajustement pour mobile */
+@media (max-width: 768px) {
+    .hero {
+        background-attachment: scroll !important;
+    }
+    
+    .hero-content img {
+        max-width: 300px !important;
+    }
+    
+    .hero-content p {
+        font-size: 1rem !important;
+    }
+}
+
+/* Effet parallax sur desktop */
+@media (min-width: 769px) {
+    .hero {
+        background-attachment: fixed;
+    }
+}
+</style>
+{{ end }}

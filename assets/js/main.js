@@ -123,30 +123,31 @@ class NomadTheme {
 
   // Accessibility improvements
   setupAccessibility() {
-    // Skip link
+    // Skip link with better positioning
     const skipLink = document.createElement('a');
     skipLink.href = '#main';
     skipLink.textContent = 'Skip to main content';
     skipLink.className = 'skip-link';
     skipLink.style.cssText = `
       position: absolute;
-      top: -40px;
-      left: 6px;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
       background: var(--primary-color);
       color: white;
-      padding: 8px;
+      padding: 8px 16px;
       text-decoration: none;
       border-radius: 4px;
-      z-index: 1001;
+      z-index: 10000;
       transition: top 0.3s;
     `;
     
     skipLink.addEventListener('focus', () => {
-      skipLink.style.top = '6px';
+      skipLink.style.top = '80px';
     });
     
     skipLink.addEventListener('blur', () => {
-      skipLink.style.top = '-40px';
+      skipLink.style.top = '-100px';
     });
     
     document.body.insertBefore(skipLink, document.body.firstChild);
