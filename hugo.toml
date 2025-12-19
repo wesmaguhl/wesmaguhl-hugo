@@ -32,6 +32,18 @@ description = "Wesmaguhl Officiel Website - Bienvenue dans notre univers"
 # Analytics (optional)
 googleAnalytics = "G-2310RJEC91"
 
+[params.cloudinary]
+cloudName = "dxxma3qih"
+# Utilisez les Public IDs complets de Cloudinary (visible dans Media Library)
+images = [
+    "432nuits_beaujofest2025_wesmaguhl-07.jpg_compressed_ns2vw7.jpg",
+    "432nuits_beaujofest2025_wesmaguhl-04.jpg_compressed_btofug.jpg",
+    "432nuits_beaujofest2025_wesmaguhl-03.jpg_compressed_my0wud.jpg",
+    "432nuits_beaujofest2025_wesmaguhl-05.jpg_compressed_jr9pgm.jpg",
+    "432nuits_beaujofest2025_wesmaguhl-06.jpg_compressed_wwpulc.jpg",
+    "432nuits_beaujofest2025_wesmaguhl-08.jpg_compressed_x7e885.jpg",
+]
+
 # Social Media Links
 [[params.social]]
 name = "YouTube"
