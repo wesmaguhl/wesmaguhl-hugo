@@ -24,8 +24,10 @@ other = "January 2006"
 other = "January 2, 2006"
 [about]
 other = "About"
-[travel]
-other = "Travel"
+[gallerie]
+other = "Gallery"
+[wesmatour]
+other = "Wesmatour"
 [hero_greeting]
 other = ""
 [follow_social]

@@ -24,8 +24,10 @@ other = "2006年1月"
 other = "2006年1月2日"
 [about]
 other = "关于"
-[travel]
-other = "旅行"
+[gallerie]
+other = "画廊"
+[wesmatour]
+other = "Wesmatour"
 [hero_greeting]
 other = ""
 [follow_social]
