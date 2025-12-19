@@ -1,7 +1,9 @@
 {{ define "main" }}
-<section class="gallery-section">
-    <div class="container">
-        <h1>{{ .Title }}</h1>
+<div style="margin-top: 5rem; padding: 2rem;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <h1 style="color: var(--primary-color); font-size: 3rem; margin-bottom: 1rem;">{{ .Title }}</h1>
+        </div>
         
         <div class="gallery-grid">
             {{- $cloudName := .Site.Params.cloudinary.cloudName -}}
@@ -19,10 +21,10 @@
         </div>
 
         <div class="photo-credit">
-            <p>Photos par Wesmaguhl</p>
+            <p>Crédits photo : Simon Morice Media, Bnji, Ludovic Dumont</p>
         </div>
     </div>
-</section>
+</div>
 
 <!-- Modal pour affichage plein écran -->
 <div id="imageModal" class="modal">
