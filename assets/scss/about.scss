@@ -8,19 +8,20 @@
 .about-content {
     max-width: 800px;
     width: 100%;
-    background: #1a1a2e;
-    border-radius: 10px;
+    background: var(--glass-bg);
+    border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(0, 212, 255, 0.2);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
 }
 
 .terminal-header {
-    background: #16213e;
+    background: var(--bg-secondary);
     padding: 12px 20px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+    border-bottom: 1px solid var(--glass-border);
 }
 
 .terminal-buttons {
@@ -40,7 +41,7 @@
 .btn-maximize { background: #28ca42; }
 
 .terminal-title {
-    color: #888;
+    color: var(--text-secondary);
     font-family: 'Monaco', 'Menlo', monospace;
     font-size: 0.9rem;
 }
@@ -59,28 +60,28 @@
 }
 
 .prompt {
-    color: #00d4ff;
+    color: var(--secondary-color);
     font-weight: bold;
 }
 
 .command {
-    color: #9d50bb;
+    color: var(--accent-color);
     font-weight: bold;
 }
 
 .content {
-    color: #e0e0e0;
+    color: var(--text-primary);
     margin: 1rem 0;
     
     h1 {
-        color: #00d4ff;
+        color: var(--primary-color);
         font-size: 1.8rem;
         margin-bottom: 1rem;
         font-family: inherit;
     }
     
     h2 {
-        color: #9d50bb;
+        color: var(--secondary-color);
         font-size: 1.3rem;
         margin: 1.5rem 0 0.8rem 0;
         font-family: inherit;
@@ -91,14 +92,14 @@
     }
     
     strong {
-        color: #00d4ff;
+        color: var(--accent-color);
     }
 }
 
 .contact-section {
     margin-top: 2rem;
     padding-top: 1rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid var(--glass-border);
 }
 
 .contact-grid {
@@ -110,13 +111,14 @@
     align-items: center;
     gap: 15px;
     padding: 8px 0;
-    color: #e0e0e0;
-    transition: all 0.3s ease;
+    color: var(--text-primary);
+    transition: var(--transition);
     
     &:hover {
-        background: rgba(0, 212, 255, 0.1);
+        background: var(--glass-bg);
         padding-left: 10px;
         border-radius: 5px;
+        transform: translateX(5px);
     }
 }
 
@@ -126,13 +128,13 @@
 }
 
 .file-name {
-    color: #00d4ff;
+    color: var(--primary-color);
     min-width: 120px;
     font-weight: bold;
 }
 
 .file-content {
-    color: #9d50bb;
+    color: var(--secondary-color);
 }
 
 @media (max-width: 768px) {
