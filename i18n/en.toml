@@ -28,6 +28,8 @@ other = "About"
 other = "Gallery"
 [wesmatour]
 other = "Wesmatour"
+[wesmarket]
+other = "Wesmarket"
 [hero_greeting]
 other = ""
 [follow_social]

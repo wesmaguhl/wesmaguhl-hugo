@@ -28,6 +28,8 @@ other = "关于"
 other = "画廊"
 [wesmatour]
 other = "Wesmatour"
+[wesmarket]
+other = "商店"
 [hero_greeting]
 other = ""
 [follow_social]
