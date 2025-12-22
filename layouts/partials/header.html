@@ -1,7 +1,9 @@
 <nav role="navigation" aria-label="Main navigation">
     <div class="container">
         <div class="nav-container">
-            <a href="{{ .Site.BaseURL }}" class="logo" aria-label="{{ .Site.Title }} - Home"><img src="{{ "images/W-blue.webp" | relURL }}" alt="{{ .Site.Title }}" style="height: 40px; width: auto;"></a>
+            {{ with resources.Get "images/W-blue.webp" }}
+            <a href="{{ $.Site.BaseURL }}" class="logo" aria-label="{{ $.Site.Title }} - Home"><img src="{{ .RelPermalink }}" alt="{{ $.Site.Title }}" style="height: 40px; width: auto;"></a>
+            {{ end }}
             <ul class="nav-links" id="nav-menu">
                 <li><a href="{{ .Site.BaseURL }}" aria-current="false">{{ i18n "home" }}</a></li>
                 <li><a href="{{ .Site.BaseURL }}galerie/" aria-current="false">{{ i18n "galerie" }}</a></li>
