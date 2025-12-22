@@ -28,9 +28,27 @@
              style="max-width: 500px; width: 90%; height: auto; margin: 0 auto 2rem auto; display: block; filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.8));">
         <p style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8); font-size: 1.5rem;">{{ .Site.Params.subtitle | default "Metal • Flute • Pagan" }}</p>
         <p style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">{{ .Site.Params.description | default "Wesmaguhl Officiel Website - Bienvenue dans notre univers" }}</p>
-        <div class="cta-buttons" style="margin-top: 2rem;">
-            <a href="{{ .Site.BaseURL }}galerie/" class="btn btn-primary">{{ i18n "galerie" }}</a>
-            <a href="{{ .Site.BaseURL }}about/" class="btn btn-secondary">{{ i18n "learn_more" }}</a>
+        
+        <!-- Social Media Links -->
+        <div class="social-links" style="margin-top: 2rem;">
+            <a href="https://www.facebook.com/wesmaguhl" target="_blank" rel="noopener noreferrer" class="social-btn facebook" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/wesmaguhl/" target="_blank" rel="noopener noreferrer" class="social-btn instagram" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com/@wesmaguhl" target="_blank" rel="noopener noreferrer" class="social-btn tiktok" aria-label="TikTok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://www.youtube.com/@wesmaguhl" target="_blank" rel="noopener noreferrer" class="social-btn youtube" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://open.spotify.com/intl-fr/artist/5qFC8CMfzTr7wB6JSH3sBM" target="_blank" rel="noopener noreferrer" class="social-btn spotify" aria-label="Spotify">
+                <i class="fab fa-spotify"></i>
+            </a>
+            <a href="https://www.deezer.com/fr/artist/163815287" target="_blank" rel="noopener noreferrer" class="social-btn deezer" aria-label="Deezer">
+                <i class="fab fa-deezer"></i>
+            </a>
         </div>
     </div>
     
@@ -43,6 +61,98 @@
 </section>
 
 <style>
+/* Social Media Links Styles */
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.social-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.social-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
+}
+
+.social-btn:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+.social-btn:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.social-btn i {
+    position: relative;
+    z-index: 1;
+}
+
+/* Social Media Brand Colors */
+.social-btn.facebook {
+    background: linear-gradient(135deg, #1877f2, #0d5dbf);
+}
+
+.social-btn.instagram {
+    background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.social-btn.tiktok {
+    background: linear-gradient(135deg, #000000, #00f2ea);
+}
+
+.social-btn.youtube {
+    background: linear-gradient(135deg, #ff0000, #cc0000);
+}
+
+.social-btn.spotify {
+    background: linear-gradient(135deg, #1db954, #1aa34a);
+}
+
+.social-btn.deezer {
+    background: linear-gradient(135deg, #ff0092, #d6007b);
+}
+
+/* Pulse animation on hover */
+@keyframes pulse {
+    0%, 100% {
+        transform: translateY(-5px) scale(1.1);
+    }
+    50% {
+        transform: translateY(-5px) scale(1.15);
+    }
+}
+
+.social-btn:hover {
+    animation: pulse 1s ease-in-out infinite;
+}
+
 /* Ajustement pour mobile */
 @media (max-width: 768px) {
     .hero {
@@ -55,6 +165,16 @@
     
     .hero-content p {
         font-size: 1rem !important;
+    }
+    
+    .social-links {
+        gap: 1rem;
+    }
+    
+    .social-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
     }
 }
 
