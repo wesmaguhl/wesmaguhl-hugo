@@ -31,9 +31,27 @@
              style="max-width: 500px; width: 90%; height: auto; margin: 0 auto 2rem auto; display: block; filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.8));">
         <p style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8); font-size: 1.5rem;">{{ .Site.Params.subtitle | default "Metal • Flute • Pagan" }}</p>
         <p style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">{{ .Site.Params.description | default "Wesmaguhl Officiel Website - Bienvenue dans notre univers" }}</p>
-        <div class="cta-buttons" style="margin-top: 2rem;">
-            <a href="{{ .Site.BaseURL }}galerie/" class="btn btn-primary">{{ i18n "galerie" }}</a>
-            <a href="{{ .Site.BaseURL }}about/" class="btn btn-secondary">{{ i18n "learn_more" }}</a>
+        
+        <!-- Social Media Links -->
+        <div class="social-links" style="margin-top: 2rem;">
+            <a href="https://www.facebook.com/wesmaguhl" target="_blank" rel="noopener noreferrer" class="btn btn-secondary facebook" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/wesmaguhl/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary instagram" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com/@wesmaguhl" target="_blank" rel="noopener noreferrer" class="btn btn-secondary tiktok" aria-label="TikTok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://www.youtube.com/@wesmaguhl" target="_blank" rel="noopener noreferrer" class="btn btn-secondary youtube" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://open.spotify.com/intl-fr/artist/5qFC8CMfzTr7wB6JSH3sBM" target="_blank" rel="noopener noreferrer" class="btn btn-secondary spotify" aria-label="Spotify">
+                <i class="fab fa-spotify"></i>
+            </a>
+            <a href="https://www.deezer.com/fr/artist/163815287" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" aria-label="Deezer">
+                <i class="fab fa-deezer deezer"></i>
+            </a>
         </div>
     </div>
     
@@ -46,6 +64,69 @@
 </section>
 
 <style>
+/* Social Media Links Styles */
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Social Media Brand Colors - Icons only */
+.fab.fa-facebook-f {
+    background: linear-gradient(135deg, #1877f2, #0d5dbf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.fab.fa-instagram {
+    background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.fab.fa-tiktok {
+    background: linear-gradient(135deg, #000000, #00f2ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.fab.fa-youtube {
+    background: linear-gradient(135deg, #ff0000, #cc0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.fab.fa-spotify {
+    background: linear-gradient(135deg, #1db954, #1aa34a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Deezer icon color only */
+.fab.fa-deezer.deezer {
+    background: linear-gradient(135deg, #ff0092, #d6007b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Pulse animation on hover */
+@keyframes pulse {
+    0%, 100% {
+        transform: translateY(-5px) scale(1.1);
+    }
+    50% {
+        transform: translateY(-5px) scale(1.15);
+    }
+}
+
 /* Ajustement pour mobile */
 @media (max-width: 768px) {
     .hero {
@@ -58,6 +139,16 @@
     
     .hero-content p {
         font-size: 1rem !important;
+    }
+    
+    .social-links {
+        gap: 1rem;
+    }
+    
+    .social-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
     }
 }
 
