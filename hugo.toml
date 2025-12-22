@@ -23,6 +23,10 @@ languageCode = "zh-CN"
 title = "Wesmaguhl 官方"
 weight = 3
 
+[caches]
+[caches.images]
+dir = ':cacheDir/images'
+
 [params]
 author = "Cauchyzor"
 subtitle = "Metal • Flute • Pagan"
