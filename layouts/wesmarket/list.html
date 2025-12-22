@@ -1,0 +1,177 @@
+{{ define "main" }}
+<div style="margin-top: 5rem; padding: 2rem;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <h1 style="color: var(--primary-color); font-size: 3rem; margin-bottom: 1rem;">{{ .Title }}</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9;">{{ .Description }}</p>
+        </div>
+        
+        <div class="merch-grid">
+            <!-- T-Shirts -->
+            <div class="merch-item">
+                <div class="merch-image">
+                    <img 
+                        src="https://res.cloudinary.com/{{ .Site.Params.cloudinary.cloudName }}/image/upload/c_fill,w_400,h_400,q_auto,f_auto/tshirt_wesmaguhl_placeholder.jpg"
+                        alt="T-Shirt Wesmaguhl"
+                        loading="lazy"
+                        onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Crect width=%22400%22 height=%22400%22 fill=%22%231a1a2e%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2224%22 fill=%22%237ac45a%22%3ET-Shirt%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="merch-content">
+                    <h3>T-Shirt Wesmaguhl</h3>
+                    <p class="merch-description">T-shirt officiel Wesmaguhl avec logo</p>
+                    <p class="merch-price">À venir</p>
+                    <a href="#" class="btn btn-primary merch-btn">Bientôt disponible</a>
+                </div>
+            </div>
+
+            <!-- CD/Album -->
+            <div class="merch-item">
+                <div class="merch-image">
+                    <img 
+                        src="https://res.cloudinary.com/{{ .Site.Params.cloudinary.cloudName }}/image/upload/c_fill,w_400,h_400,q_auto,f_auto/cd_wesmaguhl_placeholder.jpg"
+                        alt="Album CD Wesmaguhl"
+                        loading="lazy"
+                        onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Crect width=%22400%22 height=%22400%22 fill=%22%231a1a2e%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2224%22 fill=%22%237ac45a%22%3EAlbum CD%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="merch-content">
+                    <h3>Album CD</h3>
+                    <p class="merch-description">Notre dernier album en format physique</p>
+                    <p class="merch-price">À venir</p>
+                    <a href="#" class="btn btn-primary merch-btn">Bientôt disponible</a>
+                </div>
+            </div>
+
+            <!-- Mediators -->
+            <div class="merch-item">
+                <div class="merch-image">
+                    <img 
+                        src="https://res.cloudinary.com/{{ .Site.Params.cloudinary.cloudName }}/image/upload/c_fill,w_400,h_400,q_auto,f_auto/mediator_wesmaguhl_placeholder.jpg"
+                        alt="Médiators Wesmaguhl"
+                        loading="lazy"
+                        onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Crect width=%22400%22 height=%22400%22 fill=%22%231a1a2e%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2224%22 fill=%22%237ac45a%22%3EM%C3%A9diators%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="merch-content">
+                    <h3>Médiators</h3>
+                    <p class="merch-description">Pack de médiators collectors Wesmaguhl</p>
+                    <p class="merch-price">À venir</p>
+                    <a href="#" class="btn btn-primary merch-btn">Bientôt disponible</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="merch-info">
+            <p>🛒 Les produits seront bientôt disponibles à l'achat</p>
+            <p>📧 Pour toute question : <a href="mailto:contact@wesmaguhl.com">contact@wesmaguhl.com</a></p>
+        </div>
+    </div>
+</div>
+
+<style>
+.merch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.merch-item {
+    background: var(--glass-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.merch-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(122, 196, 90, 0.2);
+}
+
+.merch-image {
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(122, 196, 90, 0.1), rgba(49, 118, 58, 0.1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.merch-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.merch-item:hover .merch-image img {
+    transform: scale(1.05);
+}
+
+.merch-content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.merch-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.merch-description {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    flex: 1;
+}
+
+.merch-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.merch-btn {
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+}
+
+.merch-info {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background: var(--glass-bg);
+    border-radius: 15px;
+    border: 1px solid var(--glass-border);
+}
+
+.merch-info p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.merch-info a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.merch-info a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .merch-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+</style>
+{{ end }}
