@@ -2,7 +2,7 @@
 <div style="margin-top: 5rem; padding: 2rem;">
     <div style="max-width: 1200px; margin: 0 auto;">
         <div style="text-align: center; margin-bottom: 3rem;">
-            <h1 style="color: var(--primary-color); font-size: 3rem; margin-bottom: 1rem;">{{ .Title }}</h1>
+            <img src="/images/wesmaguhl-titre-market.webp" alt="Wesmarket" style="max-width: 600px; width: 100%; height: auto; margin-bottom: 1rem;">
             <p style="font-size: 1.2rem; opacity: 0.9;">{{ .Description }}</p>
         </div>
         
@@ -11,7 +11,7 @@
             <div class="merch-item">
                 <div class="merch-image">
                     <img 
-                        src="https://res.cloudinary.com/{{ .Site.Params.cloudinary.cloudName }}/image/upload/c_fill,w_400,h_400,q_auto,f_auto/tshirt_wesmaguhl_placeholder.jpg"
+                        src="https://res.cloudinary.com/{{ .Site.Params.cloudinary.cloudName }}/image/upload/c_fill,w_400,h_400,q_auto,f_auto/wesmaillot_ikhtto.jpg"
                         alt="T-Shirt Wesmaguhl"
                         loading="lazy"
                         onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Crect width=%22400%22 height=%22400%22 fill=%22%231a1a2e%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2224%22 fill=%22%237ac45a%22%3ET-Shirt%3C/text%3E%3C/svg%3E'">
@@ -19,8 +19,7 @@
                 <div class="merch-content">
                     <h3>T-Shirt Wesmaguhl</h3>
                     <p class="merch-description">T-shirt officiel Wesmaguhl avec logo</p>
-                    <p class="merch-price">À venir</p>
-                    <a href="#" class="btn btn-primary merch-btn">Bientôt disponible</a>
+                    <a href="#" class="btn btn-primary merch-btn">Disponible</a>
                 </div>
             </div>
 
@@ -28,7 +27,7 @@
             <div class="merch-item">
                 <div class="merch-image">
                     <img 
-                        src="https://res.cloudinary.com/{{ .Site.Params.cloudinary.cloudName }}/image/upload/c_fill,w_400,h_400,q_auto,f_auto/cd_wesmaguhl_placeholder.jpg"
+                        src="https://res.cloudinary.com/{{ .Site.Params.cloudinary.cloudName }}/image/upload/c_fill,w_400,h_400,q_auto,f_auto/album-in-the-mist-of-thoughts_yeirlp.jpg"
                         alt="Album CD Wesmaguhl"
                         loading="lazy"
                         onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Crect width=%22400%22 height=%22400%22 fill=%22%231a1a2e%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2224%22 fill=%22%237ac45a%22%3EAlbum CD%3C/text%3E%3C/svg%3E'">
@@ -36,8 +35,7 @@
                 <div class="merch-content">
                     <h3>Album CD</h3>
                     <p class="merch-description">Notre dernier album en format physique</p>
-                    <p class="merch-price">À venir</p>
-                    <a href="#" class="btn btn-primary merch-btn">Bientôt disponible</a>
+                    <a href="#" class="btn btn-primary merch-btn">Disponible</a>
                 </div>
             </div>
 
@@ -45,22 +43,20 @@
             <div class="merch-item">
                 <div class="merch-image">
                     <img 
-                        src="https://res.cloudinary.com/{{ .Site.Params.cloudinary.cloudName }}/image/upload/c_fill,w_400,h_400,q_auto,f_auto/mediator_wesmaguhl_placeholder.jpg"
+                        src="https://res.cloudinary.com/{{ .Site.Params.cloudinary.cloudName }}/image/upload/c_fill,w_400,h_400,q_auto,f_auto/wesmaillot-blanc_hbhifr.jpg"
                         alt="Médiators Wesmaguhl"
                         loading="lazy"
                         onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Crect width=%22400%22 height=%22400%22 fill=%22%231a1a2e%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2224%22 fill=%22%237ac45a%22%3EM%C3%A9diators%3C/text%3E%3C/svg%3E'">
                 </div>
                 <div class="merch-content">
                     <h3>Médiators</h3>
-                    <p class="merch-description">Pack de médiators collectors Wesmaguhl</p>
-                    <p class="merch-price">À venir</p>
+                    <p class="merch-description">Nouveau T-Shirt Blanc</p>
                     <a href="#" class="btn btn-primary merch-btn">Bientôt disponible</a>
                 </div>
             </div>
         </div>
 
         <div class="merch-info">
-            <p>Les produits seront bientôt disponibles à l'achat</p>
             <p>Pour toute question : <a href="mailto:wesmaguhl.officiel@gmail.com">wesmaguhl.officiel@gmail.com</a></p>
         </div>
     </div>
@@ -127,13 +123,6 @@
     color: var(--text-secondary);
     margin-bottom: 1rem;
     flex: 1;
-}
-
-.merch-price {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
 }
 
 .merch-btn {
