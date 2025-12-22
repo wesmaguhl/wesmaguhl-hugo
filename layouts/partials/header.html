@@ -11,7 +11,7 @@
                 <li><a href="{{ .Site.BaseURL }}wesmatour/" aria-current="false">{{ i18n "wesmatour" }}</a></li>
                 <li><a href="{{ .Site.BaseURL }}wesmarket/" aria-current="false">{{ i18n "wesmarket" }}</a></li>
             </ul>
-            <div class="lang-switcher" role="group" aria-label="Language selection">
+            <div class="lang-switcher" role="group" aria-label="Language selection" style="visibility: hidden;">
                 {{ range .Site.Languages }}
                 <a href="{{ if eq .Lang "zh" }}{{ $.Site.BaseURL }}{{ else }}{{ $.Site.BaseURL }}{{ .Lang }}/{{ end }}" 
                    class="lang-link {{ if eq .Lang $.Site.Language.Lang }}active{{ end }}" 
