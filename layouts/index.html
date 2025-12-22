@@ -144,6 +144,11 @@
     }
 }
 
+/* Hover effects with accessibility support */
+.social-btn:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
 /* Apply animation only if user hasn't requested reduced motion */
 @media (prefers-reduced-motion: no-preference) {
     .social-btn:hover {
@@ -156,10 +161,6 @@
     .social-btn:hover {
         transform: translateY(-3px) scale(1.05);
     }
-}
-
-.social-btn:hover {
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
 }
 
 /* Ajustement pour mobile */
