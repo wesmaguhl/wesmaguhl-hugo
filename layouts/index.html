@@ -31,23 +31,23 @@
         
         <!-- Social Media Links -->
         <div class="social-links" style="margin-top: 2rem;">
-            <a href="https://www.facebook.com/wesmaguhl" target="_blank" rel="noopener noreferrer" class="social-btn facebook" aria-label="Facebook">
+            <a href="https://www.facebook.com/wesmaguhl" target="_blank" rel="noopener noreferrer" class="btn btn-secondary facebook" aria-label="Facebook">
                 <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="https://www.instagram.com/wesmaguhl/" target="_blank" rel="noopener noreferrer" class="social-btn instagram" aria-label="Instagram">
+            <a href="https://www.instagram.com/wesmaguhl/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary instagram" aria-label="Instagram">
                 <i class="fab fa-instagram"></i>
             </a>
-            <a href="https://www.tiktok.com/@wesmaguhl" target="_blank" rel="noopener noreferrer" class="social-btn tiktok" aria-label="TikTok">
+            <a href="https://www.tiktok.com/@wesmaguhl" target="_blank" rel="noopener noreferrer" class="btn btn-secondary tiktok" aria-label="TikTok">
                 <i class="fab fa-tiktok"></i>
             </a>
-            <a href="https://www.youtube.com/@wesmaguhl" target="_blank" rel="noopener noreferrer" class="social-btn youtube" aria-label="YouTube">
+            <a href="https://www.youtube.com/@wesmaguhl" target="_blank" rel="noopener noreferrer" class="btn btn-secondary youtube" aria-label="YouTube">
                 <i class="fab fa-youtube"></i>
             </a>
-            <a href="https://open.spotify.com/intl-fr/artist/5qFC8CMfzTr7wB6JSH3sBM" target="_blank" rel="noopener noreferrer" class="social-btn spotify" aria-label="Spotify">
+            <a href="https://open.spotify.com/intl-fr/artist/5qFC8CMfzTr7wB6JSH3sBM" target="_blank" rel="noopener noreferrer" class="btn btn-secondary spotify" aria-label="Spotify">
                 <i class="fab fa-spotify"></i>
             </a>
-            <a href="https://www.deezer.com/fr/artist/163815287" target="_blank" rel="noopener noreferrer" class="social-btn deezer" aria-label="Deezer">
-                <i class="fab fa-deezer"></i>
+            <a href="https://www.deezer.com/fr/artist/163815287" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" aria-label="Deezer">
+                <i class="fab fa-deezer deezer"></i>
             </a>
         </div>
     </div>
@@ -70,68 +70,48 @@
     align-items: center;
 }
 
-.social-btn {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.social-btn::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
-    transform: translate(-50%, -50%);
-    transition: width 0.4s ease, height 0.4s ease;
-}
-
-.social-btn:hover::before {
-    width: 100%;
-    height: 100%;
-}
-
-.social-btn i {
-    position: relative;
-    z-index: 1;
-}
-
-/* Social Media Brand Colors */
-.social-btn.facebook {
+/* Social Media Brand Colors - Icons only */
+.fab.fa-facebook-f {
     background: linear-gradient(135deg, #1877f2, #0d5dbf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-.social-btn.instagram {
+.fab.fa-instagram {
     background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-.social-btn.tiktok {
+.fab.fa-tiktok {
     background: linear-gradient(135deg, #000000, #00f2ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-.social-btn.youtube {
+.fab.fa-youtube {
     background: linear-gradient(135deg, #ff0000, #cc0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-.social-btn.spotify {
+.fab.fa-spotify {
     background: linear-gradient(135deg, #1db954, #1aa34a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-.social-btn.deezer {
+/* Deezer icon color only */
+.fab.fa-deezer.deezer {
     background: linear-gradient(135deg, #ff0092, #d6007b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 /* Pulse animation on hover */
@@ -141,25 +121,6 @@
     }
     50% {
         transform: translateY(-5px) scale(1.15);
-    }
-}
-
-/* Hover effects with accessibility support */
-.social-btn:hover {
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
-}
-
-/* Apply animation only if user hasn't requested reduced motion */
-@media (prefers-reduced-motion: no-preference) {
-    .social-btn:hover {
-        animation: pulse 1s ease-in-out infinite;
-    }
-}
-
-/* For users who prefer reduced motion, use a simple static hover effect */
-@media (prefers-reduced-motion: reduce) {
-    .social-btn:hover {
-        transform: translateY(-3px) scale(1.05);
     }
 }
 
