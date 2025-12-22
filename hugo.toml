@@ -80,7 +80,6 @@ country = "Lyon"
 flag = ""
 period = "26 Décembre 2025"
 description = "Rock'N'Eat Festival"
-highlights = ["Co-working spaces", "Street food", "Tech meetups"]
 
 [[params.travels]]
 city = "France"
@@ -88,7 +87,6 @@ country = "St-Georges-de-Reneins"
 flag = "W"
 period = "14-15 novembre 2025"
 description = "Beaujo'Fest"
-highlights = ["Co-working spaces", "Street food", "Tech meetups"]
 
 [[params.travels]]
 city = "France"
@@ -96,7 +94,6 @@ country = "Grenoble"
 flag = "W"
 period = "6 novembre 2025 "
 description = "Halloween After Party - MAGOYOND / Y. Blues / Wesmaguhl"
-highlights = ["Co-working spaces", "Street food", "Tech meetups"]
 
 [[params.travels]]
 city = "France"
@@ -104,7 +101,6 @@ country = "Bourg - Saint-Maurice"
 flag = "W"
 period = "4 juillet 2025"
 description = "Festival Bande Rouge"
-highlights = ["Co-working spaces", "Street food", "Tech meetups"]
 
 [[params.travels]]
 city = "France"
@@ -112,7 +108,6 @@ country = "Grenoble"
 flag = "W"
 period = "21 juin 2025"
 description = "Fête de la Musique - The Rock Tavern"
-highlights = ["Co-working spaces", "Street food", "Tech meetups"]
 
 [[params.travels]]
 city = "France"
@@ -120,7 +115,6 @@ country = "Les Adrets"
 flag = "W"
 period = "13 juin 2025"
 description = "Festirock en Belledonne"
-highlights = ["Nomad Summit", "Temples", "Mountain views"]
 
 [[params.travels]]
 city = "France"
@@ -128,20 +122,12 @@ country = "Grenoble"
 flag = "W"
 period = "22 février 2025"
 description = "Release Party - The Rock Tavern"
-highlights = ["Surfing", "Rice terraces", "Startup scene"]
 
 # Contact Information
 [[params.contact]]
-icon = "📧"
 name = "email"
-value = "me@m03315.top"
+value = "wesmaguhl.officiel@gmail.com"
 
 [[params.contact]]
-icon = "💬"
-name = "wechat"
-value = "m03315_"
-
-[[params.contact]]
-icon = "🐦"
-name = "twitter"
-value = "@m03315_"
+name = "instagram"
+value = "@wesmaguhl"
