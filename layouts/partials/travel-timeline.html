@@ -12,13 +12,6 @@
                     <span class="timeline-date">{{ .period }}</span>
                 </div>
                 <p>{{ .description }}</p>
-                {{ if .highlights }}
-                <div class="highlights">
-                    {{ range .highlights }}
-                    <span class="highlight-tag">{{ . }}</span>
-                    {{ end }}
-                </div>
-                {{ end }}
             </div>
         </div>
         {{ end }}
@@ -96,21 +89,6 @@
     color: var(--secondary-color);
     font-size: 0.9rem;
     font-weight: bold;
-}
-
-.highlights {
-    margin-top: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-.highlight-tag {
-    background: rgba(157, 80, 187, 0.2);
-    color: var(--blue-accent-color);
-    padding: 4px 8px;
-    border-radius: 12px;
-    font-size: 0.8rem;
 }
 
 @media (max-width: 768px) {
