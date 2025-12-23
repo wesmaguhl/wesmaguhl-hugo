@@ -2,16 +2,16 @@
     <div class="container">
         <div class="nav-container">
             {{ with resources.Get "images/W-blue.webp" }}
-            {{ $homeURL := cond (eq $.Site.Language.Lang "fr") $.Site.BaseURL (printf "%s%s/" $.Site.BaseURL $.Site.Language.Lang) }}
-            <a href="{{ $homeURL }}" class="logo" aria-label="{{ $.Site.Title }} - Home"><img src="{{ .RelPermalink }}" alt="{{ $.Site.Title }}" style="height: 40px; width: auto;"></a>
+            {{ $langPrefix := cond (eq $.Site.Language.Lang "fr") "" (printf "%s/" $.Site.Language.Lang) }}
+            <a href="{{ $.Site.BaseURL }}{{ $langPrefix }}" class="logo" aria-label="{{ $.Site.Title }} - Home"><img src="{{ .RelPermalink }}" alt="{{ $.Site.Title }}" style="height: 40px; width: auto;"></a>
             {{ end }}
             <ul class="nav-links" id="nav-menu">
-                {{ $langPrefix := cond (eq .Site.Language.Lang "fr") "" (printf "%s/" .Site.Language.Lang) }}
-                <li><a href="{{ .Site.BaseURL }}{{ $langPrefix }}" aria-current="false">{{ i18n "home" }}</a></li>
-                <li><a href="{{ .Site.BaseURL }}{{ $langPrefix }}wesmatour/" aria-current="false">{{ i18n "wesmatour" }}</a></li>
-                <li><a href="{{ .Site.BaseURL }}{{ $langPrefix }}wesmarket/" aria-current="false">{{ i18n "wesmarket" }}</a></li>
-                <li><a href="{{ .Site.BaseURL }}{{ $langPrefix }}galerie/" aria-current="false">{{ i18n "galerie" }}</a></li>
-                <li><a href="{{ .Site.BaseURL }}{{ $langPrefix }}about/" aria-current="false">{{ i18n "about" }}</a></li>
+                {{ $langPrefix := cond (eq $.Site.Language.Lang "fr") "" (printf "%s/" $.Site.Language.Lang) }}
+                <li><a href="{{ $.Site.BaseURL }}{{ $langPrefix }}" aria-current="false">{{ i18n "home" }}</a></li>
+                <li><a href="{{ $.Site.BaseURL }}{{ $langPrefix }}wesmatour/" aria-current="false">{{ i18n "wesmatour" }}</a></li>
+                <li><a href="{{ $.Site.BaseURL }}{{ $langPrefix }}wesmarket/" aria-current="false">{{ i18n "wesmarket" }}</a></li>
+                <li><a href="{{ $.Site.BaseURL }}{{ $langPrefix }}galerie/" aria-current="false">{{ i18n "galerie" }}</a></li>
+                <li><a href="{{ $.Site.BaseURL }}{{ $langPrefix }}about/" aria-current="false">{{ i18n "about" }}</a></li>
             </ul>
             <div class="lang-switcher" role="group" aria-label="Language selection">
                 {{ range .Site.Languages }}
