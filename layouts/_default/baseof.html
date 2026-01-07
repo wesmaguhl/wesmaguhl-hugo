@@ -13,19 +13,5 @@
     
     {{ partial "footer.html" . }}
     {{ partial "analytics.html" . }}
-    
-    <script>
-    // Mobile menu toggle
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const navMenu = document.getElementById('nav-menu');
-    
-    if (mobileMenuBtn) {
-        mobileMenuBtn.addEventListener('click', () => {
-            const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
-            mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
-            navMenu.classList.toggle('active');
-        });
-    }
-    </script>
 </body>
 </html>
