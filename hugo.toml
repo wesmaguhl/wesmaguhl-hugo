@@ -78,6 +78,13 @@ project_url = "/projects/nomad-app/"
 city = "France"
 country = "Lyon"
 flag = ""
+period = "7 Mars 2026"
+description = "Tram 33"
+
+[[params.travels]]
+city = "France"
+country = "Lyon"
+flag = "W"
 period = "26 Décembre 2025"
 description = "Rock'N'Eat Festival"
 
