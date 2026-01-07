@@ -5,11 +5,11 @@
             <a href="{{ $.Site.BaseURL }}" class="logo" aria-label="{{ $.Site.Title }} - Home"><img src="{{ .RelPermalink }}" alt="{{ $.Site.Title }}" style="height: 40px; width: auto;"></a>
             {{ end }}
             <ul class="nav-links" id="nav-menu">
-                <li><a href="{{ .Site.BaseURL }}" aria-current="false">{{ i18n "home" }}</a></li>
-                <li><a href="{{ .Site.BaseURL }}wesmatour/" aria-current="false">{{ i18n "wesmatour" }}</a></li>
-                <li><a href="{{ .Site.BaseURL }}wesmarket/" aria-current="false">{{ i18n "wesmarket" }}</a></li>
-                <li><a href="{{ .Site.BaseURL }}galerie/" aria-current="false">{{ i18n "galerie" }}</a></li>
-                <li><a href="{{ .Site.BaseURL }}about/" aria-current="false">{{ i18n "about" }}</a></li>
+                <li class="title-font"><a href="{{ .Site.BaseURL }}" aria-current="false">{{ i18n "home" }}</a></li>
+                <li class="title-font"><a href="{{ .Site.BaseURL }}wesmatour/" aria-current="false">{{ i18n "wesmatour" }}</a></li>
+                <li class="title-font"><a href="{{ .Site.BaseURL }}wesmarket/" aria-current="false">{{ i18n "wesmarket" }}</a></li>
+                <li class="title-font"><a href="{{ .Site.BaseURL }}galerie/" aria-current="false">{{ i18n "galerie" }}</a></li>
+                <li class="title-font"><a href="{{ .Site.BaseURL }}about/" aria-current="false">{{ i18n "about" }}</a></li>
             </ul>
             <div class="lang-switcher" role="group" aria-label="Language selection" style="visibility: hidden;">
                 {{ range .Site.Languages }}

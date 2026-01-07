@@ -32,6 +32,12 @@ body {
   overflow-x: hidden;
 }
 
+.title-font {
+  font-family: "Celtic Garamond", serif;
+  font-size: 1rem; 
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8); 
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -503,6 +509,12 @@ section {
   }
 }
 
+@font-face {
+  font-family: "Celtic Garamond";
+  src: url("../fonts/CelticGaramondThe2Nd-1912.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
 
 // About page styles
 @import "about";
