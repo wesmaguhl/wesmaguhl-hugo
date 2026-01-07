@@ -29,30 +29,35 @@
         <img src="https://res.cloudinary.com/{{ .Site.Params.cloudinary.cloudName }}/image/upload/v1766392307/wesmaghul-1FFwC_ymxzrw.webp" 
              alt="Wesmaguhl" 
              style="max-width: 500px; width: 100%; height: auto; margin: 0 auto 2rem auto; display: block; filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.8));">
-        <p style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8); font-size: 1.5rem;">{{ .Site.Params.subtitle | default "Metal • Flute • Pagan" }}</p>
-        <p style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">{{ .Site.Params.description | default "Wesmaguhl Officiel Website - Bienvenue dans notre univers" }}</p>
-        
-        <!-- Social Media Links -->
-        <div class="social-links" style="margin-top: 2rem;">
-            <a href="https://www.facebook.com/wesmaguhl" target="_blank" rel="noopener noreferrer" class="btn btn-secondary facebook" aria-label="Facebook">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://www.instagram.com/wesmaguhl/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary instagram" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.tiktok.com/@wesmaguhl" target="_blank" rel="noopener noreferrer" class="btn btn-secondary tiktok" aria-label="TikTok">
-                <i class="fab fa-tiktok"></i>
-            </a>
-            <a href="https://www.youtube.com/@wesmaguhl" target="_blank" rel="noopener noreferrer" class="btn btn-secondary youtube" aria-label="YouTube">
-                <i class="fab fa-youtube"></i>
-            </a>
-            <a href="https://open.spotify.com/intl-fr/artist/5qFC8CMfzTr7wB6JSH3sBM" target="_blank" rel="noopener noreferrer" class="btn btn-secondary spotify" aria-label="Spotify">
-                <i class="fab fa-spotify"></i>
-            </a>
-            <a href="https://www.deezer.com/fr/artist/163815287" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" aria-label="Deezer">
-                <i class="fab fa-deezer deezer"></i>
-            </a>
-        </div>
+        <p class="title-font">{{ .Site.Params.subtitle | default "Metal • Flute • Pagan" }}</p>
+    </div>
+    
+    <!-- Social Media Links -->
+    <div class="social-links" style="position: absolute; bottom: 160px; left: 0; right: 0; z-index: 10; margin-top: 2rem; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; align-items: center;">
+        <a href="https://www.facebook.com/wesmaguhl" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/wesmaguhl/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@wesmaguhl" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" aria-label="TikTok">
+            <i class="fab fa-tiktok"></i>
+        </a>
+        <a href="https://www.youtube.com/@wesmaguhl" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://open.spotify.com/intl-fr/artist/5qFC8CMfzTr7wB6JSH3sBM" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" aria-label="Spotify">
+            <i class="fab fa-spotify"></i>
+        </a>
+        <a href="https://www.deezer.com/fr/artist/163815287" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" aria-label="Deezer">
+            <i class="fab fa-deezer"></i>
+        </a>
+    </div>
+    
+    <div class="social-links" style="position: absolute; bottom: 80px; left: 0; right: 0; z-index: 10; margin-top: 2rem; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; align-items: center;">
+        <a href="mailto:wesmaguhl.officiel@gmail.com" rel="noopener noreferrer" class="btn btn-primary" aria-label="Programmez nous !!!">
+            Programmez nous !!!</i>
+        </a>
     </div>
     
     <!-- Footer intégré dans la page d'accueil -->
@@ -74,44 +79,8 @@
 }
 
 /* Social Media Brand Colors - Icons only */
-.fab.fa-facebook-f {
-    background: linear-gradient(135deg, #1877f2, #0d5dbf);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.fab.fa-instagram {
-    background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.fab.fa-tiktok {
-    background: linear-gradient(135deg, #000000, #00f2ea);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.fab.fa-youtube {
-    background: linear-gradient(135deg, #ff0000, #cc0000);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.fab.fa-spotify {
-    background: linear-gradient(135deg, #1db954, #1aa34a);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-/* Deezer icon color only */
-.fab.fa-deezer.deezer {
-    background: linear-gradient(135deg, #ff0092, #d6007b);
+.fab{
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
