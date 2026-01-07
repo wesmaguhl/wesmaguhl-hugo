@@ -169,8 +169,9 @@ section {
 }
 
 .btn-primary {
-  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-  color: white;
+  background: transparent;
+  color: var(--blue-accent-color);
+  border: 2px solid var(--blue-accent-color);
 }
 
 .btn-secondary {
