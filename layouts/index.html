@@ -3,10 +3,6 @@
 <div id="particles" class="particles"></div>
 
 <section class="hero" style="
-    background-image: url('https://res.cloudinary.com/dxxma3qih/image/upload/v1766411281/album_bg_fqc6mb.webp');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -14,6 +10,23 @@
     position: relative;
     overflow: hidden;
 ">
+    <!-- Background Video via Cloudinary Player -->
+    <iframe
+        src="https://player.cloudinary.com/embed/?cloud_name=dxxma3qih&public_id=clip-acceuil_t2km7p&profile=cld-looping"
+        style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            z-index: 0;
+            pointer-events: none;
+        "
+        allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+        allowfullscreen
+    ></iframe>
+    
     <!-- Overlay pour améliorer la lisibilité du texte -->
     <div style="
         position: absolute;
@@ -22,7 +35,7 @@
         right: 0;
         bottom: 0;
         background: rgba(0, 0, 0, 0.5);
-        z-index: 0;
+        z-index: 1;
     "></div>
     
     <div class="hero-content" style="position: relative; z-index: 10; text-align: center;">
