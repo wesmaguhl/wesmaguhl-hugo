@@ -448,12 +448,13 @@ section {
 
 .particle {
   position: absolute;
-  width: 2px;
-  height: 2px;
+  width: 4px;
+  height: 4px;
   background: var(--primary-color);
   border-radius: 50%;
   animation: float 6s infinite linear;
   will-change: transform;
+  box-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color);
 }
 
 @keyframes float {
