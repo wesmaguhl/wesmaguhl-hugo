@@ -31,7 +31,7 @@
     ></iframe>
     
     <!-- Background Image (hidden by default) -->
-    <div id="heroImage" style="
+    <div id="heroImage" class="album-image" style="
         position: absolute;
         top: 0;
         left: 0;
@@ -65,11 +65,17 @@
                 // Show video for 10 seconds
                 videoFrame.style.opacity = '1';
                 image.style.opacity = '0';
+                image.classList.remove('animating');
                 
                 setTimeout(function() {
                     // Hide video, show image
                     videoFrame.style.opacity = '0';
                     image.style.opacity = '1';
+                    
+                    // Start brightness animation on image
+                    setTimeout(function() {
+                        image.classList.add('animating');
+                    }, 100); // Small delay to ensure opacity transition completes
                     
                     // Show image for 15 seconds
                     setTimeout(function() {
@@ -164,6 +170,23 @@
     50% {
         transform: translateY(-5px) scale(1.15);
     }
+}
+
+/* Album image brightness animation */
+@keyframes brightnessAnimation {
+    0% {
+        filter: brightness(0.7);
+    }
+    50% {
+        filter: brightness(1.3);
+    }
+    100% {
+        filter: brightness(0.7);
+    }
+}
+
+.album-image.animating {
+    animation: brightnessAnimation 3s ease-in-out infinite;
 }
 
 /* Ajustement pour mobile */
