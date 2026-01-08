@@ -12,7 +12,8 @@
 ">
     <!-- Background Video via Cloudinary Player -->
     <iframe
-        src="https://player.cloudinary.com/embed/?cloud_name=dxxma3qih&public_id=clip-acceuil_t2km7p&profile=cld-looping"
+        id="heroVideo"
+        src="https://player.cloudinary.com/embed/?cloud_name=dxxma3qih&public_id=clip-acceuil_t2km7p&profile=cld-looping&controls=false&showLogo=false"
         style="
             position: absolute;
             top: 0;
@@ -21,11 +22,28 @@
             height: 100%;
             border: none;
             z-index: 0;
+            opacity: 1;
+            transition: opacity 2.5s ease-in-out;
             pointer-events: none;
         "
         allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
         allowfullscreen
     ></iframe>
+    
+    <!-- Background Image (hidden by default) -->
+    <div id="heroImage" style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('https://res.cloudinary.com/dxxma3qih/image/upload/v1766411281/album_bg_fqc6mb.webp');
+        background-size: cover;
+        background-position: center;
+        z-index: 0;
+        opacity: 0;
+        transition: opacity 2.5s ease-in-out;
+    "></div>
     
     <!-- Overlay pour améliorer la lisibilité du texte -->
     <div style="
@@ -37,6 +55,38 @@
         background: rgba(0, 0, 0, 0.5);
         z-index: 1;
     "></div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const videoFrame = document.getElementById('heroVideo');
+            const image = document.getElementById('heroImage');
+            
+            function cycleMedia() {
+                // Show video for 10 seconds
+                videoFrame.style.opacity = '1';
+                image.style.opacity = '0';
+                
+                setTimeout(function() {
+                    // Hide video, show image
+                    videoFrame.style.opacity = '0';
+                    image.style.opacity = '1';
+                    
+                    // Show image for 15 seconds
+                    setTimeout(function() {
+                        // Reload iframe to restart video
+                        const src = videoFrame.src;
+                        videoFrame.src = src;
+                        
+                        // Restart cycle
+                        cycleMedia();
+                    }, 15000); // 15 seconds for image
+                }, 10000); // 10 seconds for video
+            }
+            
+            // Start the cycle
+            cycleMedia();
+        });
+    </script>
     
     <div class="hero-content" style="position: relative; z-index: 10; text-align: center;">
         <img src="https://res.cloudinary.com/{{ .Site.Params.cloudinary.cloudName }}/image/upload/v1766392307/wesmaghul-1FFwC_ymxzrw.webp" 
