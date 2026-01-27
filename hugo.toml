@@ -76,6 +76,13 @@ project_url = "/projects/nomad-app/"
 # Travel Timeline
 [[params.travels]]
 city = "France"
+country = "Grenoble"
+flag = ""
+period = "25 Mars 2026"
+description = "Austra Rocks - Neyrpic"
+
+[[params.travels]]
+city = "France"
 country = "Lyon"
 flag = ""
 period = "7 Mars 2026"
