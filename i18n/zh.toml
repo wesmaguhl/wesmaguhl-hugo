@@ -44,6 +44,8 @@ other = "作品展示"
 other = "查看详情"
 [posts_count]
 other = "篇文章"
+[press]
+other = "媒体报道"
 [all_categories]
 other = "所有分类"
 [view_posts]

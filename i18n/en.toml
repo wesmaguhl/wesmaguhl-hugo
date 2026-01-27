@@ -14,6 +14,8 @@ other = "Latest Blog"
 other = "All"
 [read_more]
 other = "Read More"
+[press]
+other = "Press"
 [prev_page]
 other = "Previous"
 [next_page]
