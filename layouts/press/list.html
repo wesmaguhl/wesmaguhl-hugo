@@ -1,0 +1,184 @@
+{{ define "main" }}
+<div style="margin-top: 5rem; padding: 2rem;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <h1 class="title-font" style="font-size: 3rem; margin-bottom: 1rem; color: var(--primary-color);">{{ i18n "press" }}</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9;">{{ .Description }}</p>
+        </div>
+        
+        <div class="press-grid">
+            <a href="https://www.metalexpressradio.com/2025/07/01/wesmaguhl-live/" class="press-item" target="_blank" rel="noopener noreferrer">
+                <div class="press-image">
+                    <img 
+                        src="https://api.screenshotmachine.com/?key=YOUR_API_KEY&url=https://www.metalexpressradio.com/2025/07/01/wesmaguhl-live/&dimension=400x300"
+                        alt="Interview sur Metal Express Radio"
+                        loading="lazy"
+                        onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect width=%22400%22 height=%22300%22 fill=%22%231a1a2e%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2220%22 fill=%22%237ac45a%22%3EMetal Express Radio%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="press-content">
+                    <h3>Interview - Metal Express Radio</h3>
+                    <p class="press-description">Découvrez notre interview exclusive sur Metal Express Radio</p>
+                    <span class="press-date">Janvier 2026</span>
+                </div>
+            </a>
+
+            <a href="https://www.metalrock-magazine.com/live-reports/34573/live-report-beaujofest-jour-1-14-11-2025-lapirogue-saint-georges-de-reneins/" class="press-item" target="_blank" rel="noopener noreferrer">
+                <div class="press-image">
+                    <img 
+                        src="https://api.screenshotmachine.com/?key=YOUR_API_KEY&url=https://www.metalrock-magazine.com/live-reports/34573/live-report-beaujofest-jour-1-14-11-2025-lapirogue-saint-georges-de-reneins/&dimension=400x300"
+                        alt="Article sur Metal Rock Magazine"
+                        loading="lazy"
+                        onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect width=%22400%22 height=%22300%22 fill=%22%231a1a2e%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2220%22 fill=%22%237ac45a%22%3EMetal Rock Magazine%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="press-content">
+                    <h3>Portrait - Metal Rock Magazine</h3>
+                    <p class="press-description">Un portrait détaillé de notre parcours musical</p>
+                    <span class="press-date">Décembre 2025</span>
+                </div>
+            </a>
+
+            <a href="https://www.rockenfolie.com/podcasts/il-y-a-un-groupe-dans-ma-cuisine-150/le-beaujo-fest-acte-iii-vendredi-soir-avec-doctor-cunningham-wesmaguhl-et-orion-a-metallica-experience-151" class="press-item" target="_blank" rel="noopener noreferrer">
+                <div class="press-image">
+                    <img 
+                        src="https://api.screenshotmachine.com/?key=YOUR_API_KEY&url=https://www.rockenfolie.com/podcasts/il-y-a-un-groupe-dans-ma-cuisine-150/le-beaujo-fest-acte-iii-vendredi-soir-avec-doctor-cunningham-wesmaguhl-et-orion-a-metallica-experience-151&dimension=400x300"
+                        alt="Review sur Rockenfolie"
+                        loading="lazy"
+                        onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect width=%22400%22 height=%22300%22 fill=%22%231a1a2e%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2220%22 fill=%22%237ac45a%22%3EMusic Blog%3C/text%3E%3C/svg%3E'">
+                </div>
+                <div class="press-content">
+                    <h3>Review - Rockenfolie</h3>
+                    <p class="press-description">Critique de notre dernier album</p>
+                    <span class="press-date">Novembre 2025</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<style>
+.press-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.press-item {
+    background: var(--glass-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+}
+
+.press-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(122, 196, 90, 0.2);
+    border-color: var(--primary-color);
+}
+
+.press-image {
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(122, 196, 90, 0.1), rgba(49, 118, 58, 0.1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.press-image::after {
+    content: '🔗';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.press-item:hover .press-image::after {
+    opacity: 1;
+}
+
+.press-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.press-item:hover .press-image img {
+    transform: scale(1.05);
+}
+
+.press-content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.press-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.press-description {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    flex: 1;
+}
+
+.press-date {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.press-info {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background: var(--glass-bg);
+    border-radius: 15px;
+    border: 1px solid var(--glass-border);
+}
+
+.press-info p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.press-info a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.press-info a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .press-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+</style>
+{{ end }}
