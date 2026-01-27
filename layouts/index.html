@@ -126,11 +126,64 @@
     </div>
     
     <div class="social-links" style="position: absolute; bottom: 50px; left: 0; right: 0; z-index: 10; margin-top: 2rem; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; align-items: center;">
-        <a href="mailto:wesmaguhl.officiel@gmail.com" rel="noopener noreferrer" class="btn btn-primary" aria-label="{{ i18n "program_us" }}">
-            {{ i18n "program_us" }}</i>
-        </a>
+        <button onclick="openContactModal()" class="btn btn-primary" aria-label="{{ i18n "program_us" }}" style="cursor: pointer;">
+            {{ i18n "program_us" }}
+        </button>
     </div>
     
+    <!-- Modal de contact -->
+    <div id="contactModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 9999; align-items: center; justify-content: center;">
+        <div style="background: var(--bg-secondary); border-radius: 15px; padding: 2rem; max-width: 400px; border: 1px solid var(--glass-border); position: relative;">
+            <button onclick="closeContactModal()" style="position: absolute; top: 10px; right: 10px; background: none; border: none; color: var(--text-primary); font-size: 1.5rem; cursor: pointer; padding: 0.5rem;" aria-label="Fermer">×</button>
+            
+            <h2 style="color: var(--primary-color); margin-bottom: 1.5rem; text-align: center;">{{ i18n "contact" }}</h2>
+            
+            <p style="text-align: center; margin-bottom: 1.5rem; color: var(--text-secondary);">Choisissez comment nous contacter :</p>
+            
+            <div style="display: flex; justify-content: space-around; gap: 2rem;">
+                <!-- Mailto -->
+                <div style="text-align: center;">
+                    <a href="mailto:wesmaguhl.officiel@gmail.com" 
+                       style="color: var(--primary-color); transition: var(--transition); font-size: 2.5rem; display: block;" 
+                       aria-label="Ouvrir dans le client email"
+                       title="Client email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <p style="font-size: 0.85rem; margin-top: 0.5rem; color: var(--text-secondary);">Client email</p>
+                </div>
+                
+                <!-- Gmail -->
+                <div style="text-align: center;">
+                    <a href="https://mail.google.com/mail/?view=cm&to=wesmaguhl.officiel@gmail.com" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       style="color: var(--primary-color); transition: var(--transition); font-size: 2.5rem; display: block;" 
+                       aria-label="Ouvrir dans Gmail"
+                       title="Gmail">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <p style="font-size: 0.85rem; margin-top: 0.5rem; color: var(--text-secondary);">Gmail</p>
+                </div>
+                
+                <!-- Copier -->
+                <div style="text-align: center;">
+                    <a href="#" 
+                       onclick="copyEmailInModal(event)" 
+                       id="copyEmailModalBtn"
+                       style="color: var(--primary-color); transition: var(--transition); font-size: 2.5rem; display: block; cursor: pointer;" 
+                       aria-label="Copier l'adresse"
+                       title="Copier">
+                        <i class="fas fa-copy"></i>
+                    </a>
+                    <p id="copyModalLabel" style="font-size: 0.85rem; margin-top: 0.5rem; color: var(--text-secondary);">Copier</p>
+                </div>
+            </div>
+            
+            <p style="text-align: center; margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-primary);">wesmaguhl.officiel@gmail.com</p>
+        </div>
+    </div>
+    
+
     <!-- Footer intégré dans la page d'accueil -->
     <div style="position: absolute; bottom: 20px; left: 0; right: 0; z-index: 10; text-align: center;">
         <p style="color: rgba(255, 255, 255, 0.6); margin: 0; font-size: 0.9rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">
@@ -138,6 +191,56 @@
         </p>
     </div>
 </section>
+
+<script>
+function openContactModal() {
+    document.getElementById('contactModal').style.display = 'flex';
+}
+
+function closeContactModal() {
+    document.getElementById('contactModal').style.display = 'none';
+}
+
+function copyEmailInModal(e) {
+    e.preventDefault();
+    const email = 'wesmaguhl.officiel@gmail.com';
+    const btn = document.getElementById('copyEmailModalBtn');
+    const label = document.getElementById('copyModalLabel');
+    
+    navigator.clipboard.writeText(email).then(function() {
+        const originalHTML = btn.innerHTML;
+        btn.innerHTML = '<i class="fas fa-check"></i>';
+        btn.style.color = 'var(--blue-accent-color)';
+        label.textContent = 'Copié !';
+        label.style.color = 'var(--primary-color)';
+        
+        setTimeout(function() {
+            btn.innerHTML = originalHTML;
+            btn.style.color = 'var(--primary-color)';
+            label.textContent = 'Copier';
+            label.style.color = 'var(--text-secondary)';
+        }, 2000);
+    }).catch(function() {
+        alert('Email : wesmaguhl.officiel@gmail.com');
+    });
+}
+
+// Fermer le modal en cliquant à l'extérieur
+document.addEventListener('click', function(event) {
+    const modal = document.getElementById('contactModal');
+    if (event.target === modal) {
+        closeContactModal();
+    }
+});
+
+// Fermer le modal avec la touche Escape
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeContactModal();
+    }
+});
+</script>
+    
 
 <style>
 /* Social Media Links Styles */
@@ -156,7 +259,7 @@
 }
 
 /* Social Media Brand Colors - Icons only */
-.fab{
+.social-links .fab{
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
