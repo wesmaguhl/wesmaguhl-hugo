@@ -18,6 +18,8 @@ other = "Read More"
 other = "Press"
 [prev_page]
 other = "Previous"
+[program_us]
+other = "Program Us!"
 [next_page]
 other = "Next"
 [date_format]

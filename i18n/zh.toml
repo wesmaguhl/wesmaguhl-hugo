@@ -46,6 +46,8 @@ other = "查看详情"
 other = "篇文章"
 [press]
 other = "媒体报道"
+[program_us]
+other = "联系我们！"
 [all_categories]
 other = "所有分类"
 [view_posts]
