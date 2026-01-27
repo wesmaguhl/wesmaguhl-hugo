@@ -12,9 +12,10 @@
                 <li class="title-font"><a href="{{ .Site.BaseURL }}about/" aria-current="false">{{ i18n "about" }}</a></li>
                 <li class="title-font"><a href="{{ .Site.BaseURL }}press/" aria-current="false">{{ i18n "press" }}</a></li>
             </ul>
-            <div >
-                <a href="mailto:wesmaguhl.officiel@gmail.com" rel="noopener noreferrer" class="btn btn-primary" aria-label="{{ i18n "contact" }}">
-                    {{ i18n "contact" }}</i>
+            <div>
+                <a href="mailto:wesmaguhl.officiel@gmail.com" rel="noopener noreferrer" style="color: var(--blue-accent-color); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; transition: var(--transition);" aria-label="{{ i18n "contact" }}">
+                    <i class="fas fa-envelope"></i>
+                    <span>{{ i18n "contact" }}</span>
                 </a>
             </div>
             <!-- <div class="lang-switcher" role="group" aria-label="Language selection" style="visibility: hidden;">
