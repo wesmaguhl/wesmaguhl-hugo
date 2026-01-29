@@ -84,17 +84,17 @@ description = "Austra Rocks - Neyrpic"
 
 [[params.travels]]
 city = "France"
-country = "Lyon"
-flag = ""
-period = "7 Mars 2026"
-description = "Tram 33"
-
-[[params.travels]]
-city = "France"
 country = "Ambérieu-en-Bugey"
 flag = ""
 period = "14 Mars 2026"
 description = "Les Triplettes Social Club"
+
+[[params.travels]]
+city = "France"
+country = "Lyon"
+flag = ""
+period = "7 Mars 2026"
+description = "Tram 33"
 
 [[params.travels]]
 city = "France"
