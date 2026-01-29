@@ -7,14 +7,14 @@
         
         <p style="text-align: center; margin-bottom: 1.5rem; color: var(--text-secondary);">Dégainer votre meilleur mail !</p>
         
-        <p style="text-align: center; margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-primary); display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
-            wesmaguhl.officiel@gmail.com
+        <p style="text-align: center; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+            <span style="font-family: 'Courier New', monospace; font-size: 0.9rem; color: var(--text-primary); background: rgba(0, 0, 0, 0.3); padding: 0.5rem 0.75rem; border-radius: 6px; border: 1px solid rgba(255, 255, 255, 0.1);">wesmaguhl.officiel@gmail.com</span>
             <button onclick="copyEmailInModal(event)" id="copyEmailModalBtn" style="background: none; border: none; color: var(--primary-color); cursor: pointer; padding: 0.25rem; font-size: 1.1rem; transition: var(--transition);" aria-label="Copier l'adresse" title="Copier l'adresse">
                 <i class="fas fa-copy"></i>
             </button>
         </p>
         
-        <p style="text-align: center; margin-bottom: 1.5rem; color: var(--text-secondary);">Choisissez votre arme :</p>
+        <p style="text-align: center; margin-bottom: 1.5rem; color: var(--text-secondary);">Ou encore, choisissez votre arme :</p>
 
         <div style="display: flex; justify-content: space-around; gap: 2rem;">
             <!-- Mailto -->
@@ -56,7 +56,7 @@ function closeContactModal() {
 
 function copyEmailInModal(e) {
     e.preventDefault();
-    const email = '{{ .Site.Params.contactEmail }}';
+    const email = 'wesmaguhl.officiel@gmail.com';
     const btn = document.getElementById('copyEmailModalBtn');
     
     navigator.clipboard.writeText(email).then(function() {
