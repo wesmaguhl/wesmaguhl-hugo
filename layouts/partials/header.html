@@ -12,59 +12,13 @@
                 <li class="title-font"><a href="{{ .Site.BaseURL }}about/" aria-current="false">{{ i18n "about" }}</a></li>
                 <li class="title-font"><a href="{{ .Site.BaseURL }}press/" aria-current="false">{{ i18n "press" }}</a></li>
             </ul>
-            <div style="display: flex; align-items: center; gap: 1rem;">
-                <!-- Mailto - Client email par défaut -->
-                <a href="mailto:wesmaguhl.officiel@gmail.com" 
-                   style="color: var(--blue-accent-color); transition: var(--transition); font-size: 1.2rem;" 
-                   aria-label="Ouvrir dans le client email"
-                   title="Ouvrir dans votre client email">
-                    <i class="fas fa-envelope"></i>
-                </a>
                 
-                <!-- Gmail -->
-                <a href="https://mail.google.com/mail/?view=cm&to=wesmaguhl.officiel@gmail.com" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   style="color: var(--blue-accent-color); transition: var(--transition); font-size: 1.2rem;" 
-                   aria-label="Ouvrir dans Gmail"
-                   title="Ouvrir dans Gmail">
-                    <i class="fab fa-google"></i>
-                </a>
-                
-                <!-- Copier dans le presse-papiers -->
-                <a href="#" 
-                   onclick="copyEmailToClipboard(event)" 
-                   id="copyEmailBtn"
-                   style="color: var(--blue-accent-color); transition: var(--transition); font-size: 1.2rem; cursor: pointer; position: relative;" 
-                   aria-label="Copier l'adresse email"
-                   title="Copier l'adresse email">
-                    <i class="fas fa-copy"></i>
-                </a>
+            <div>
+                <button onclick="openContactModal()" class="btn btn-primary" aria-label="{{ i18n "contact" }}" style="cursor: pointer;">
+                    {{ i18n "contact" }}
+                </button>
             </div>
-            <script>
-            function copyEmailToClipboard(e) {
-                e.preventDefault();
-                const email = 'wesmaguhl.officiel@gmail.com';
-                const btn = document.getElementById('copyEmailBtn');
-                
-                navigator.clipboard.writeText(email).then(function() {
-                    // Remplacer l'icône temporairement
-                    const originalHTML = btn.innerHTML;
-                    btn.innerHTML = '<i class="fas fa-check"></i>';
-                    btn.style.color = 'var(--primary-color)';
-                    btn.title = 'Copié !';
-                    
-                    // Remettre l'icône originale après 2 secondes
-                    setTimeout(function() {
-                        btn.innerHTML = originalHTML;
-                        btn.style.color = 'var(--blue-accent-color)';
-                        btn.title = 'Copier l\'adresse email';
-                    }, 2000);
-                }).catch(function() {
-                    alert('Email : wesmaguhl.officiel@gmail.com');
-                });
-            }
-            </script>
+
             <!-- <div class="lang-switcher" role="group" aria-label="Language selection" style="visibility: hidden;">
                 {{ range .Site.Languages }}
                 <a href="{{ if eq .Lang "zh" }}{{ $.Site.BaseURL }}{{ else }}{{ $.Site.BaseURL }}{{ .Lang }}/{{ end }}" 

@@ -1,0 +1,90 @@
+<!-- Modal de contact -->
+<div id="contactModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 9999;">
+    <div style="background: var(--bg-secondary); border-radius: 15px; padding: 2rem; max-width: 400px; width: 90%; border: 1px solid var(--glass-border); position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <button onclick="closeContactModal()" style="position: absolute; top: 10px; right: 10px; background: none; border: none; color: var(--text-primary); font-size: 1.5rem; cursor: pointer; padding: 0.5rem;" aria-label="Fermer">×</button>
+        
+        <h2 style="color: var(--primary-color); margin-bottom: 1.5rem; text-align: center;">{{ i18n "contact" }}</h2>
+        
+        <p style="text-align: center; margin-bottom: 1.5rem; color: var(--text-secondary);">Dégainer votre meilleur mail !</p>
+        
+        <p style="text-align: center; margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-primary); display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+            wesmaguhl.officiel@gmail.com
+            <button onclick="copyEmailInModal(event)" id="copyEmailModalBtn" style="background: none; border: none; color: var(--primary-color); cursor: pointer; padding: 0.25rem; font-size: 1.1rem; transition: var(--transition);" aria-label="Copier l'adresse" title="Copier l'adresse">
+                <i class="fas fa-copy"></i>
+            </button>
+        </p>
+        
+        <p style="text-align: center; margin-bottom: 1.5rem; color: var(--text-secondary);">Choisissez votre arme :</p>
+
+        <div style="display: flex; justify-content: space-around; gap: 2rem;">
+            <!-- Mailto -->
+            <div style="text-align: center;">
+                <a href="mailto:wesmaguhl.officiel@gmail.com" 
+                    style="color: var(--primary-color); transition: var(--transition); font-size: 2.5rem; display: block;" 
+                    aria-label="Ouvrir dans le client email"
+                    title="Client email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <p style="font-size: 0.85rem; margin-top: 0.5rem; color: var(--text-secondary);">Client email</p>
+            </div>
+            
+            <!-- Gmail -->
+            <div style="text-align: center;">
+                <a href="https://mail.google.com/mail/?view=cm&to=wesmaguhl.officiel@gmail.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    style="color: var(--primary-color); transition: var(--transition); font-size: 2.5rem; display: block;" 
+                    aria-label="Ouvrir dans Gmail"
+                    title="Gmail">
+                    <i class="fab fa-google"></i>
+                </a>
+                <p style="font-size: 0.85rem; margin-top: 0.5rem; color: var(--text-secondary);">Gmail</p>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<script>
+function openContactModal() {
+    document.getElementById('contactModal').style.display = 'flex';
+}
+
+function closeContactModal() {
+    document.getElementById('contactModal').style.display = 'none';
+}
+
+function copyEmailInModal(e) {
+    e.preventDefault();
+    const email = '{{ .Site.Params.contactEmail }}';
+    const btn = document.getElementById('copyEmailModalBtn');
+    
+    navigator.clipboard.writeText(email).then(function() {
+        const originalHTML = btn.innerHTML;
+        btn.innerHTML = '<i class="fas fa-check"></i>';
+        btn.style.color = 'var(--blue-accent-color)';
+        
+        setTimeout(function() {
+            btn.innerHTML = originalHTML;
+            btn.style.color = 'var(--primary-color)';
+        }, 2000);
+    }).catch(function() {
+        alert('Email : wesmaguhl.officiel@gmail.com');
+    });
+}
+
+// Fermer le modal en cliquant à l'extérieur
+document.addEventListener('click', function(event) {
+    const modal = document.getElementById('contactModal');
+    if (event.target === modal) {
+        closeContactModal();
+    }
+});
+
+// Fermer le modal avec la touche Escape
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeContactModal();
+    }
+});
+</script>
