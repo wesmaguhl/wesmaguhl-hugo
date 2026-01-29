@@ -31,6 +31,7 @@ dir = ':cacheDir/images'
 author = "Cauchyzor"
 subtitle = "Metal • Flute • Pagan"
 description = "Wesmaguhl Officiel Website - Bienvenue dans notre univers"
+contactEmail = "wesmaguhl.officiel@gmail.com"
 
 # Analytics (optional)
 googleAnalytics = "G-2310RJEC91"

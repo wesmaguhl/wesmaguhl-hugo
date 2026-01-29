@@ -8,7 +8,7 @@
         <p style="text-align: center; margin-bottom: 1.5rem; color: var(--text-secondary);">Dégainer votre meilleur mail !</p>
         
         <p style="text-align: center; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
-            <span style="font-family: 'Courier New', monospace; font-size: 0.9rem; color: var(--text-primary); background: rgba(0, 0, 0, 0.3); padding: 0.5rem 0.75rem; border-radius: 6px; border: 1px solid rgba(255, 255, 255, 0.1);">wesmaguhl.officiel@gmail.com</span>
+            <span style="font-family: 'Courier New', monospace; font-size: 0.9rem; color: var(--text-primary); background: rgba(0, 0, 0, 0.3); padding: 0.5rem 0.75rem; border-radius: 6px; border: 1px solid rgba(255, 255, 255, 0.1);">{{ .Site.Params.contactEmail }}</span>
             <button onclick="copyEmailInModal(event)" id="copyEmailModalBtn" style="background: none; border: none; color: var(--primary-color); cursor: pointer; padding: 0.25rem; font-size: 1.1rem; transition: var(--transition);" aria-label="Copier l'adresse" title="Copier l'adresse">
                 <i class="fas fa-copy"></i>
             </button>
@@ -19,7 +19,7 @@
         <div style="display: flex; justify-content: space-around; gap: 2rem;">
             <!-- Mailto -->
             <div style="text-align: center;">
-                <a href="mailto:wesmaguhl.officiel@gmail.com" 
+                <a href="mailto:{{ .Site.Params.contactEmail }}" 
                     style="color: var(--primary-color); transition: var(--transition); font-size: 2.5rem; display: block;" 
                     aria-label="Ouvrir dans le client email"
                     title="Client email">
@@ -30,7 +30,7 @@
             
             <!-- Gmail -->
             <div style="text-align: center;">
-                <a href="https://mail.google.com/mail/?view=cm&to=wesmaguhl.officiel@gmail.com" 
+                <a href="https://mail.google.com/mail/?view=cm&to={{ .Site.Params.contactEmail }}" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     style="color: var(--primary-color); transition: var(--transition); font-size: 2.5rem; display: block;" 
@@ -56,7 +56,7 @@ function closeContactModal() {
 
 function copyEmailInModal(e) {
     e.preventDefault();
-    const email = 'wesmaguhl.officiel@gmail.com';
+    const email = '{{ .Site.Params.contactEmail }}';
     const btn = document.getElementById('copyEmailModalBtn');
     
     navigator.clipboard.writeText(email).then(function() {
@@ -69,7 +69,7 @@ function copyEmailInModal(e) {
             btn.style.color = 'var(--primary-color)';
         }, 2000);
     }).catch(function() {
-        alert('Email : wesmaguhl.officiel@gmail.com');
+        alert('Email : {{ .Site.Params.contactEmail }}');
     });
 }
 
