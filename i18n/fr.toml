@@ -1,58 +1,58 @@
-[home]
-other = "Accueil"
-[social]
-other = "Réseaux Sociaux"
-[blog]
-other = "Blog"
-[portfolio]
-other = "Portfolio"
-[contact]
-other = "Contact"
-[latest_blog]
-other = "Dernier Blog"
-[all_posts]
-other = "Tous"
-[read_more]
-other = "Lire Plus"
-[prev_page]
-other = "Précédent"
-[next_page]
-other = "Suivant"
-[date_format]
-other = "janvier 2006"
-[date_format_full]
-other = "2 janvier 2006"
 [about]
 other = "Wesmacrew"
-[galerie]
-other = "Galerie"
-[wesmatour]
-other = "Wesmatour"
-[wesmarket]
-other = "Wesmarket"
-[hero_greeting]
-other = ""
-[follow_social]
-other = "Suivez-nous sur nos réseaux sociaux"
-[learn_more]
-other = "En Savoir Plus"
-[social_description]
-other = "Partage d'idées et d'expériences sur différentes plateformes"
-[portfolio_title]
-other = "Portfolio"
-[press]
-other = "Presse"
-[program_us]
-other = "Programmez-nous !"
-[view_details]
-other = "Voir Détails"
-[posts_count]
-other = "articles"
 [all_categories]
 other = "Toutes les Catégories"
-[view_posts]
-other = "Voir Articles"
+[all_posts]
+other = "Tous"
+[blog]
+other = "Blog"
+[contact]
+other = "Contact"
 [contact_email]
 other = "email.txt"
 [contact_wechat]
 other = "wechat.txt"
+[date_format]
+other = "janvier 2006"
+[date_format_full]
+other = "2 janvier 2006"
+[follow_social]
+other = "Suivez-nous sur nos réseaux sociaux"
+[galerie]
+other = "Galerie"
+[hero_greeting]
+other = ""
+[home]
+other = "Accueil"
+[latest_blog]
+other = "Dernier Blog"
+[learn_more]
+other = "En Savoir Plus"
+[next_page]
+other = "Suivant"
+[portfolio]
+other = "Portfolio"
+[portfolio_title]
+other = "Portfolio"
+[posts_count]
+other = "articles"
+[press]
+other = "Presse"
+[prev_page]
+other = "Précédent"
+[program_us]
+other = "Programmez-nous !"
+[read_more]
+other = "Lire Plus"
+[social]
+other = "Réseaux Sociaux"
+[social_description]
+other = "Partage d'idées et d'expériences sur différentes plateformes"
+[view_details]
+other = "Voir Détails"
+[view_posts]
+other = "Voir Articles"
+[wesmarket]
+other = "Wesmarket"
+[wesmatour]
+other = "Wesmatour"

@@ -1,58 +1,58 @@
-[home]
-other = "Home"
-[social]
-other = "Social Media"
-[blog]
-other = "Blog"
-[portfolio]
-other = "Portfolio"
-[contact]
-other = "Contact"
-[latest_blog]
-other = "Latest Blog"
+[about]
+other = "Wesmacrew"
+[all_categories]
+other = "All Categories"
 [all_posts]
 other = "All"
-[read_more]
-other = "Read More"
+[blog]
+other = "Blog"
+[contact]
+other = "Contact"
+[contact_email]
+other = "email.txt"
+[contact_wechat]
+other = "wechat.txt"
+[date_format]
+other = "January 2006"
+[date_format_full]
+other = "January 2, 2006"
+[follow_social]
+other = "Follow us on our social media"
+[galerie]
+other = "Gallery"
+[hero_greeting]
+other = ""
+[home]
+other = "Home"
+[latest_blog]
+other = "Latest Blog"
+[learn_more]
+other = "Learn More"
+[next_page]
+other = "Next"
+[portfolio]
+other = "Portfolio"
+[portfolio_title]
+other = "Portfolio"
+[posts_count]
+other = "posts"
 [press]
 other = "Press"
 [prev_page]
 other = "Previous"
 [program_us]
 other = "Program Us!"
-[next_page]
-other = "Next"
-[date_format]
-other = "January 2006"
-[date_format_full]
-other = "January 2, 2006"
-[about]
-other = "Wesmacrew"
-[galerie]
-other = "Gallery"
-[wesmatour]
-other = "Wesmatour"
-[wesmarket]
-other = "Wesmarket"
-[hero_greeting]
-other = ""
-[follow_social]
-other = "Follow us on our social media"
-[learn_more]
-other = "Learn More"
+[read_more]
+other = "Read More"
+[social]
+other = "Social Media"
 [social_description]
 other = "Sharing insights and experiences across platforms, welcome to connect"
-[portfolio_title]
-other = "Portfolio"
 [view_details]
 other = "View Details"
-[posts_count]
-other = "posts"
-[all_categories]
-other = "All Categories"
 [view_posts]
 other = "View Posts"
-[contact_email]
-other = "email.txt"
-[contact_wechat]
-other = "wechat.txt"
+[wesmarket]
+other = "Wesmarket"
+[wesmatour]
+other = "Wesmatour"
