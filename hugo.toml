@@ -90,6 +90,13 @@ description = "Tram 33"
 
 [[params.travels]]
 city = "France"
+country = "Ambérieu-en-Bugey"
+flag = ""
+period = "14 Mars 2026"
+description = "Les Triplettes Social Club"
+
+[[params.travels]]
+city = "France"
 country = "Lyon"
 flag = "W"
 period = "26 Décembre 2025"
@@ -136,6 +143,7 @@ country = "Grenoble"
 flag = "W"
 period = "22 février 2025"
 description = "Release Party - The Rock Tavern"
+
 
 # Contact Information
 [[params.contact]]
