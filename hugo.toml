@@ -79,6 +79,13 @@ project_url = "/projects/nomad-app/"
 city = "France"
 country = "Grenoble"
 flag = ""
+period = "21 Juin 2026"
+description = "Fête de la Musique - The Rock Tavern"
+
+[[params.travels]]
+city = "France"
+country = "Grenoble"
+flag = ""
 period = "25 Mars 2026"
 description = "Austra Rocks - Neyrpic"
 
