@@ -104,7 +104,7 @@
     </div>
     
     <!-- Social Media Links -->
-    <div class="social-links" style="position: absolute; bottom: 140px; left: 0; right: 0; z-index: 10; margin-top: 2rem; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; align-items: center;">
+    <div class="social-links hero-social-links-bar" style="position: absolute; bottom: 140px; left: 0; right: 0; z-index: 10; margin-top: 2rem; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; align-items: center;">
         <a href="https://www.facebook.com/wesmaguhl" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" aria-label="Facebook">
             <i class="fab fa-facebook-f"></i>
         </a>
@@ -125,10 +125,18 @@
         </a>
     </div>
     
-    <div class="social-links" style="position: absolute; bottom: 50px; left: 0; right: 0; z-index: 10; margin-top: 2rem; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; align-items: center;">
-        <button onclick="openContactModal()" class="btn btn-primary" aria-label="{{ i18n "program_us" }}" style="cursor: pointer;">
-            {{ i18n "program_us" }}
-        </button>
+    <div class="hero-cta-wrapper" style="position: absolute; bottom: 50px; left: 0; right: 0; z-index: 10; display: flex; justify-content: center; flex-wrap: wrap; align-items: center;">
+        <div class="hero-cta-group">
+            <button onclick="openContactModal()" class="hero-cta-btn hero-cta-primary" aria-label="{{ i18n "program_us" }}">
+                <i class="fas fa-calendar-alt"></i>
+                <span>{{ i18n "program_us" }}</span>
+            </button>
+            <div class="hero-cta-divider"></div>
+            <a href="https://www.youtube.com/watch?v=RgFLr4Crwng&list=RDRgFLr4Crwng" target="_blank" rel="noopener noreferrer" class="hero-cta-btn hero-cta-secondary" aria-label="{{ i18n "our_last_clip" }}">
+                <i class="fas fa-play"></i>
+                <span>{{ i18n "our_last_clip" }}</span>
+            </a>
+        </div>
     </div>    
 
     <!-- Footer intégré dans la page d'accueil -->
@@ -220,6 +228,94 @@
 @media (min-width: 769px) {
     .hero {
         background-attachment: fixed;
+    }
+}
+
+/* Hero CTA Button Group */
+.hero-cta-group {
+    display: inline-flex;
+    align-items: stretch;
+    border-radius: 50px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255,255,255,0.05) inset;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.hero-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.8rem 1.6rem;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.25s ease, color 0.25s ease;
+    white-space: nowrap;
+}
+
+.hero-cta-btn i {
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.hero-cta-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: #fff;
+}
+
+.hero-cta-primary:hover {
+    filter: brightness(1.15);
+}
+
+.hero-cta-secondary {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.hero-cta-secondary:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+}
+
+.hero-cta-divider {
+    width: 1px;
+    background: rgba(255, 255, 255, 0.2);
+    flex-shrink: 0;
+    align-self: stretch;
+}
+
+@media (max-width: 768px) {
+    /* Remonte les icônes sociales pour laisser de la place aux boutons CTA */
+    .hero-social-links-bar {
+        bottom: 185px !important;
+    }
+    .hero-cta-wrapper {
+        bottom: 55px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-social-links-bar {
+        bottom: 210px !important;
+    }
+    .hero-cta-group {
+        flex-direction: column;
+        border-radius: 16px;
+    }
+    .hero-cta-divider {
+        width: auto;
+        height: 1px;
+    }
+    .hero-cta-btn {
+        justify-content: center;
     }
 }
 </style>
