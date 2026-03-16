@@ -30,6 +30,8 @@ other = "Dernier Blog"
 other = "En Savoir Plus"
 [next_page]
 other = "Suivant"
+[our_last_clip]
+other = "Notre dernier clip"
 [portfolio]
 other = "Portfolio"
 [portfolio_title]

@@ -28,6 +28,8 @@ other = "Home"
 other = "Latest Blog"
 [learn_more]
 other = "Learn More"
+[our_last_clip]
+other = "Our last clip"
 [next_page]
 other = "Next"
 [portfolio]
