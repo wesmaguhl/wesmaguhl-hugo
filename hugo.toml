@@ -84,22 +84,29 @@ description = "Fête de la Musique - The Rock Tavern"
 
 [[params.travels]]
 city = "France"
-country = "Grenoble"
+country = "Fontanil-Cornillon (38)"
 flag = ""
+period = "12 Juin 2026"
+description = "Titi Twister"
+
+[[params.travels]]
+city = "France"
+country = "Grenoble"
+flag = "W"
 period = "25 Mars 2026"
 description = "Austra Rocks - Neyrpic"
 
 [[params.travels]]
 city = "France"
 country = "Ambérieu-en-Bugey"
-flag = ""
+flag = "W"
 period = "14 Mars 2026"
 description = "Les Triplettes Social Club"
 
 [[params.travels]]
 city = "France"
 country = "Lyon"
-flag = ""
+flag = "W"
 period = "7 Mars 2026"
 description = "Tram 33"
 
