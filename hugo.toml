@@ -79,7 +79,7 @@ project_url = "/projects/nomad-app/"
 city = "Lyon"
 country = "France"
 flag = ""
-period = "21 Juin 2026"
+period = "18 Juillet 2026"
 description = "Rock'N'Eat"
 
 [[params.travels]]
@@ -119,7 +119,7 @@ description = "Tram 33"
 
 [[params.travels]]
 city = "Lyon"
-country = ""
+country = "France"
 flag = "W"
 period = "26 Décembre 2025"
 description = "Rock'N'Eat Festival"
