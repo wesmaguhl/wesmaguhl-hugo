@@ -76,95 +76,88 @@ project_url = "/projects/nomad-app/"
 
 # Travel Timeline
 [[params.travels]]
-city = "Lyon"
+city = "Janzé (35)"
+country = "France"
+flag = ""
+period = "3 Juillet 2027"
+description = "Ar'Vran Fest"
+
+[[params.travels]]
+city = "La Terrasse (38)"
+country = "France"
+flag = ""
+period = "18 Juillet 2026"
+description = "Festival le Grow Son"
+
+[[params.travels]]
+city = "Lyon (69)"
 country = "France"
 flag = ""
 period = "18 Juillet 2026"
 description = "Rock n'Eat"
 
 [[params.travels]]
-city = "Grenoble"
+city = "Grenoble (38)"
 country = "France"
 flag = ""
 period = "21 Juin 2026"
 description = "Fête de la Musique - The Rock Tavern"
 
 [[params.travels]]
-city = "France"
-country = "Fontanil-Cornillon (38)"
+city = "Fontanil-Cornillon (38)"
+country = "France"
 flag = ""
 period = "12 Juin 2026"
 description = "Titi Twister"
 
 [[params.travels]]
-city = "Grenoble"
+city = "Grenoble (38)"
 country = "France"
 flag = "W"
 period = "25 Mars 2026"
 description = "Austra Rocks - Neyrpic"
 
 [[params.travels]]
-city = "Ambérieu-en-Bugey"
+city = "Ambérieu-en-Bugey (01)"
 country = "France"
 flag = "W"
 period = "14 Mars 2026"
 description = "Les Triplettes Social Club"
 
 [[params.travels]]
-city = "Lyon"
+city = "Lyon (69)"
 country = "France"
 flag = "W"
 period = "7 Mars 2026"
 description = "Tram 33"
 
 [[params.travels]]
-city = "Lyon"
+city = "Lyon (69)"
 country = "France"
 flag = "W"
 period = "26 Décembre 2025"
 description = "Rock n'Eat Festival"
 
 [[params.travels]]
-city = "St-Georges-de-Reneins"
+city = "St-Georges-de-Reneins (69)"
 country = "France"
 flag = "W"
 period = "14-15 novembre 2025"
 description = "Beaujo'Fest"
 
 [[params.travels]]
-city = "Grenoble"
+city = "Grenoble (38)"
 country = "France"
 flag = "W"
 period = "6 novembre 2025 "
 description = "Halloween After Party - MAGOYOND / Y. Blues / Wesmaguhl"
 
 [[params.travels]]
-city = "Bourg - Saint-Maurice"
+city = "Bourg - Saint-Maurice (73)"
 country = "France"
 flag = "W"
 period = "4 juillet 2025"
 description = "Festival Bande Rouge"
-
-[[params.travels]]
-city = "Grenoble"
-country = "France"
-flag = "W"
-period = "21 juin 2025"
-description = "Fête de la Musique - The Rock Tavern"
-
-[[params.travels]]
-city = "Les Adrets"
-country = "France"
-flag = "W"
-period = "13 juin 2025"
-description = "Festirock en Belledonne"
-
-[[params.travels]]
-city = "Grenoble"
-country = "France"
-flag = "W"
-period = "22 février 2025"
-description = "Release Party - The Rock Tavern"
 
 
 # Contact Information
