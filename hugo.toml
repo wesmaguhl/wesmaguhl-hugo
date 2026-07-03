@@ -99,14 +99,14 @@ description = "Rock n'Eat"
 [[params.travels]]
 city = "Grenoble (38)"
 country = "France"
-flag = ""
+flag = "W"
 period = "21 Juin 2026"
 description = "Fête de la Musique - The Rock Tavern"
 
 [[params.travels]]
 city = "Fontanil-Cornillon (38)"
 country = "France"
-flag = ""
+flag = "W"
 period = "12 Juin 2026"
 description = "Titi Twister"
 
