@@ -76,6 +76,13 @@ project_url = "/projects/nomad-app/"
 
 # Travel Timeline
 [[params.travels]]
+city = "Albertville (73)"
+country = "France"
+flag = ""
+period = "11 Septembre 2027"
+description = "Midgard Festival"
+
+[[params.travels]]
 city = "Janzé (35)"
 country = "France"
 flag = ""
@@ -136,7 +143,7 @@ city = "Lyon (69)"
 country = "France"
 flag = "W"
 period = "26 Décembre 2025"
-description = "Rock n'Eat Festival"
+description = "Rock n'Eat"
 
 [[params.travels]]
 city = "St-Georges-de-Reneins (69)"
