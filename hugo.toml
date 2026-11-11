@@ -90,6 +90,20 @@ period = "3 Juillet 2027"
 description = "Ar'Vran Fest"
 
 [[params.travels]]
+city = "Izeaux (38)"
+country = "France"
+flag = ""
+period = "24 Avril 2027"
+description = "Magma Tone"
+
+[[params.travels]]
+city = "Paris (75)"
+country = "France"
+flag = ""
+period = "10 Janvier 2027"
+description = "Tremplin du Cernunnos Pagan Fest"
+
+[[params.travels]]
 city = "La Terrasse (38)"
 country = "France"
 flag = ""
@@ -159,12 +173,6 @@ flag = "W"
 period = "6 novembre 2025 "
 description = "Halloween After Party - MAGOYOND / Y. Blues / Wesmaguhl"
 
-[[params.travels]]
-city = "Bourg - Saint-Maurice (73)"
-country = "France"
-flag = "W"
-period = "4 juillet 2025"
-description = "Festival Bande Rouge"
 
 
 # Contact Information
